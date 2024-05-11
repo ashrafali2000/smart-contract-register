@@ -58,7 +58,7 @@ export default function Home() {
   };
   return (
     <main className="flex min-h-screen flex-col items-center p-3 md:p-0 bg-teal-300">
-      <div className="flex self-end p-4">
+      {/* <div className="flex self-end p-4">
         <ConnectWallet />
       </div>
       <div className="w-full max-w-lg">
@@ -107,7 +107,7 @@ export default function Home() {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
     </main>
   );
 }
