@@ -46,9 +46,7 @@ export default function Home() {
       const data = await Register({
         args: [
           formData.user_address,
-          parseInt(Number(LastIdUser && LastIdUser[1])) >= 3
-            ? formData.ref_address
-            : "0x9cd8056Bc2BCe75205C0BAe31dff27CD8b02786C",
+          formData.ref_address,
           "0x131B63c522F7bF238199A032A764e682278E7FF1",
           true,
         ],
@@ -83,23 +81,23 @@ export default function Home() {
               placeholder="user Address"
             />
           </div>
-          {parseInt(Number(LastIdUser && LastIdUser[1])) >= 3 && (
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="ref-address"
-              >
-                Ref Address
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="ref_address"
-                type="text"
-                onChange={handleChange}
-                placeholder="Ref address"
-              />
-            </div>
-          )}
+
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="ref-address"
+            >
+              Ref Address
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="ref_address"
+              type="text"
+              onChange={handleChange}
+              placeholder="Ref address"
+            />
+          </div>
+
           <div className="flex items-center justify-center">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
